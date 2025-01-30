@@ -26,6 +26,10 @@ const enableBtns = () => {
 const resetGame = () => {
     turn0 = true;
     enableBtns();
+    boxes.forEach((box) => {
+        box.innerText = ""; // Clear the box content
+        box.classList.remove("O-color", "X-color"); // Remove any added color classes
+    });
     msgContainer.classList.add("hide");
 }
 
